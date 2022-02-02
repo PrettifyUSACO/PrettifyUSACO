@@ -5,10 +5,22 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "css": ["prism.css", "styles.css"],
-      "js": ["./contentScript.js", "prism.js"]
+      "matches": ["*://usaco.org/*"],
+      "js": ["src/contentScript.js"]
     }
   ],
-  "permissions": ["storage"]
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Prettify USACO"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["storage"], 
+  "web_accessible_resources": [
+    {
+      "resources": ["prism/*"],
+      "matches": ["*://usaco.org/*"]
+    }
+  ]
 }
