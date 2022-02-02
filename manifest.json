@@ -1,0 +1,14 @@
+{
+  "name": "PrettifyUSACO",
+  "description": "",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["http://www.usaco.org/current/data/*"],
+      "css": ["styles.css"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"]
+}

@@ -1,0 +1,25 @@
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: white;
+  --border-color: #252526;
+}
+
+pre {
+  font-family: monospace, 'Source Code Pro', Monaco;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1em;
+  border: 10px solid var(--border-color);
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+}
+
+/* p,
+ol,
+li {
+  border: 1px solid red;
+  width: 70ch;
+} */
