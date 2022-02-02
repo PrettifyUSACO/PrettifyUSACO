@@ -5,9 +5,9 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["http://www.usaco.org/current/data/*"],
-      "css": ["styles.css"],
-      "js": ["content-script.js"]
+      "matches": ["http://www.usaco.org/*"],
+      "css": ["styles.css", "prism.css"],
+      "js": ["content-script.js", "prism.js"]
     }
   ],
   "permissions": ["storage", "activeTab", "scripting"]

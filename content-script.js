@@ -1,22 +1,27 @@
 console.log('hello');
 
-console.log(document.getElementsByTagName('pre'));
+const divs = document.querySelectorAll('div');
+for (const div of divs) {
+    div.classList.add("line-numbers");
+}
 
-// Array.from(document.getElementsByTagName('pre')).forEach((el) => {
-//   const copy = document.createElement('button');
-//   copy.className = 'copy-button';
-//   copy.innerHTML = 'copy';
-//   el.appendChild(copy);
-// });
+const LANGUAGE = "python";
 
-// const script = document.createElement('script');
-// script.src =
-//   '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js';
+const preElements = document.getElementsByTagName('pre');
+const codeElements = document.getElementsByTagName("code"); 
+for (const codeElement of codeElements) {
+    codeElement.classList.add("language-" + LANGUAGE);
+    codeElement.classList.add("line-numbers");
+}
 
-// const link = document.createElement('link');
-// link.rel = 'stylesheet';
-// link.href =
-//   '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css';
+for (const preElement of preElements) {
+    if (!preElement.classList.contains("prettyprint")) {continue;}
+    const codeElement = document.createElement("code");
+    codeElement.setAttribute("class", `language-${LANGUAGE}`);
+    codeElement.innerHTML = preElement.innerHTML;
+    preElement.replaceChild(codeElement, preElement.firstChild);
+    preElement.classList.add(`language-${LANGUAGE}`);
+    preElement.classList.add("line-numbers");
+    preElement.setAttribute("tabindex", "0");
 
-// document.getElementsByTagName('head')[0].appendChild(script);
-// document.getElementsByTagName('head')[0].appendChild(link);
+}
