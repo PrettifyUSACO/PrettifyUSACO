@@ -1,13 +1,14 @@
-
 /*:root {
   --bg-color: #1e1e1e;
   --text-color: white;
   --border-color: #252526;
 }*/
 
-* {
+/** {
   font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important; 
-}
+}*/
+
+
 pre {
   background-color: var(--bg-color);
   color: var(--text-color);
