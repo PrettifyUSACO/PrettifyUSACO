@@ -1,17 +1,4 @@
-console.log('hello');
-
-
-const divs = document.querySelectorAll('div');
-for (const div of divs) {
-    div.classList.add("line-numbers");
-}
-
-const LANGUAGE = "python";
-
-const preElements = document.getElementsByTagName('pre');
-const codeElements = document.getElementsByTagName("code"); 
-
-console.log(preElements);
+let mode = "dark"; 
 
 const detectLang = (lang) => {
     if (lang.includes("#include")){

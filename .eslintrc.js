@@ -1,4 +1,3 @@
-Copycat
 module.exports = {
   'env': {
     'browser': true,
