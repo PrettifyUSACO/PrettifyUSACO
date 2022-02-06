@@ -45,10 +45,9 @@ async function injectCSS() {
     let darkMode; 
     await new Promise((resolve) => {
         console.log("here");
-        chrome.runtime.sendMessage({darkMode: "ask"}, (response) => {
-            console.log(`response: ${response}`);
-            darkMode = response.darkMode;
-            resolve(); 
+        chrome.storage.sync.get(['darkMode'], (result) => {
+            darkMode = result.darkMode;
+            resolve();
         })
     }); 
 

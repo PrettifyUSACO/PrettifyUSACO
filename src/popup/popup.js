@@ -26,6 +26,10 @@ const span = document.createElement("span");
 span.classList.add("toggle-label"); span.classList.add("text"); 
 span.innerHTML = "Dark Mode";
 
+const h3 = document.createElement('h3');
+h3.innerText = "Make sure to share with all your USACO Buddies!"; 
+h3.classList.add("plug"); 
+
 console.log("adding listener");
 
 
@@ -57,6 +61,7 @@ async function adjustCheck() {
         label.appendChild(span);
         document.body.appendChild(h1);
         document.body.appendChild(label); // added the label here 
+        document.body.appendChild(h3);
     })
 }
 

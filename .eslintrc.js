@@ -36,9 +36,5 @@ module.exports = {
       'error',
       'always'
     ]
-  }, 
-  "prefer-const": ["error", {
-    "destructuring": "any",
-    "ignoreReadBeforeAssign": false
-  }]
+  }
 };

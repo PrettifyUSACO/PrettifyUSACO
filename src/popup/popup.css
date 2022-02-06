@@ -3,7 +3,7 @@
   }
   body {
     font-family: -apple-system, ".SFNSText-Regular", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
-    width: 100px; 
+    width: 150px; 
     height: 200px; 
     text-align: center; 
 }
@@ -13,7 +13,7 @@
   }
   .toggle-switch {
     display: inline-block;
-    background: #ccc;
+    background: rgb(211, 211, 211);
     border-radius: 16px;
     width: 58px;
     height: 32px;
@@ -41,7 +41,7 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
   }
   .toggle-checkbox:checked + .toggle-switch {
-    background: #56c080;
+    background: #303130;
   }
   .toggle-checkbox:checked + .toggle-switch:before {
     left: 30px;
@@ -62,6 +62,10 @@
 }
 
 .text {
-    font-size: 1em; 
+    font-size: 1.5em; 
     font-weight: bold;
+}
+
+.plug {
+    font-size: 1em;
 }

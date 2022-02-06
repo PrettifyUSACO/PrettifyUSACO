@@ -17,7 +17,8 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.reload(tabs[0].id);
+       chrome.tabs.reload(tabs[0].id);
     });
     return true; 
 })
+

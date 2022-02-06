@@ -5,7 +5,7 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["*://usaco.org/*"],
+      "matches": ["*://www.usaco.org/*"],
       "js": ["src/contentScript.js"]
     }
   ],
@@ -20,7 +20,7 @@
   "web_accessible_resources": [
     {
       "resources": ["prism/*"],
-      "matches": ["*://usaco.org/*"]
+      "matches": ["*://www.usaco.org/*"]
     }
   ]
 }
