@@ -1,7 +1,7 @@
 // on message 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-       chrome.storage.sync.get(['darkMode'], (result) => {
+       chrome.storage.local.get(['darkMode'], (result) => {
            console.log(result); 
            sendResponse({darkMode: result.darkMode});
        }); 
@@ -9,10 +9,13 @@ chrome.runtime.onMessage.addListener(
     }
 ); 
 
+console.log("dank");
+
 // on installation. 
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.sync.set({darkMode: true});
-})
+    chrome.storage.local.set({darkMode: true});
+    console.log("installed");
+});
 
 
 chrome.storage.onChanged.addListener((changes, namespace) => {

@@ -1,12 +1,17 @@
 *, *:before, *:after {
     box-sizing: border-box;
   }
+
+  .center {
+    text-align: center !important;
+  }
+
   body {
     font-family: -apple-system, ".SFNSText-Regular", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
-    width: 150px; 
-    height: 200px; 
-    text-align: center; 
-}
+    width: 185px; 
+    height: 225px; 
+    text-align: center !important; 
+  }
   .toggle {
     cursor: pointer;
     display: inline-block;

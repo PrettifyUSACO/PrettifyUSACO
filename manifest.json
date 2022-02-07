@@ -2,28 +2,23 @@
   "name": "Prettify USACO",
   "description": "Get prettier, more readable USACO Solutions!",
   "version": "1.0.0",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "icons": {
     "128": "src/images/icon128.png"
   },
   "content_scripts": [
     {
-      "matches": ["*://www.usaco.org/*"],
+      "matches": ["http://usaco.org/*"],
       "js": ["src/contentScript.js"]
     }
   ],
-  "action": {
-    "default_popup": "src/popup/popup.html",
-    "default_title": "Prettify USACO"
+  "browser_action": {
+    "default_popup": "src/popup/popup.html", 
+    "browser_style": true
   },
   "background": {
-    "service_worker": "src/background.js"
+    "scripts": ["src/background.js"]
   },
   "permissions": ["storage"],
-  "web_accessible_resources": [
-    {
-      "resources": ["prism/*"],
-      "matches": ["*://www.usaco.org/*"]
-    }
-  ]
+  "web_accessible_resources": ["prism/*"]
 }

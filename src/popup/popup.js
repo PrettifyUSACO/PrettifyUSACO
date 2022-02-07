@@ -32,7 +32,9 @@ const h3 = document.createElement('h3');
 h3.innerText = 'Make sure to share with all your USACO Buddies!';
 h3.classList.add('plug');
 
-console.log('adding listener');
+for (const item of [h1, label, input, div, br, span, h3]) {
+    item.classList.add("center");
+}
 
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
@@ -48,10 +50,10 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 });
 
 async function adjustCheck() {
-  chrome.storage.sync.get(['darkMode'], (result) => {
+  chrome.storage.local.get(['darkMode'], (result) => {
     console.log(result);
     if (result.darkMode == undefined) {
-      chrome.storage.sync.set({ darkMode: true });
+      chrome.storage.local.set({ darkMode: true });
       result.darkMode = true;
     }
 
@@ -64,7 +66,7 @@ async function adjustCheck() {
     }
 
     input.addEventListener('change', (event) => {
-      chrome.storage.sync.set({ darkMode: input.checked });
+      chrome.storage.local.set({ darkMode: input.checked });
       // triggers message from background script?
     });
 

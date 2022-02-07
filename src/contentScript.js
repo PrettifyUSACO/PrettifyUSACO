@@ -43,15 +43,18 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 async function injectCSS() {
     let darkMode; 
+    console.log("running it");
     await new Promise((resolve) => {
         console.log("here");
-        chrome.storage.sync.get(['darkMode'], (result) => {
+        chrome.storage.local.get(['darkMode'], (result) => {
             darkMode = result.darkMode;
             resolve();
         })
     }); 
 
-    console.log(`darkMode is: ${darkMode}`);
+    console.log("here");
+    //console.log(darkMode);
+    
     const css = document.createElement("link");
     css.setAttribute("rel", "stylesheet");
     const name = lightOrDark(darkMode);
