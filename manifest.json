@@ -3,6 +3,9 @@
   "description": "",
   "version": "1.0.0",
   "manifest_version": 3,
+  "icons": {
+    "128": "src/images/icon128.png"
+  },
   "content_scripts": [
     {
       "matches": ["*://www.usaco.org/*"],
@@ -16,7 +19,7 @@
   "background": {
     "service_worker": "src/background.js"
   },
-  "permissions": ["storage"], 
+  "permissions": ["storage"],
   "web_accessible_resources": [
     {
       "resources": ["prism/*"],

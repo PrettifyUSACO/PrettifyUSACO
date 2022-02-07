@@ -1,0 +1,21 @@
+{
+  "name": "PrettifyUSACO",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "node create.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrettifyUSACO/PrettifyUSACO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrettifyUSACO/PrettifyUSACO/issues"
+  },
+  "homepage": "https://github.com/PrettifyUSACO/PrettifyUSACO#readme"
+}
