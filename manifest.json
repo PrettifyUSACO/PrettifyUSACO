@@ -1,6 +1,6 @@
 {
-  "name": "PrettifyUSACO",
-  "description": "",
+  "name": "Prettify USACO",
+  "description": "Get prettier, more readable USACO Solutions!",
   "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
