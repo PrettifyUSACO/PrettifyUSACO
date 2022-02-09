@@ -8,7 +8,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://usaco.org/*"],
+      "matches": ["http://usaco.org/*", "http://*.usaco.org/*"],
       "js": ["src/contentScript.js"]
     }
   ],
