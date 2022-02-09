@@ -2,7 +2,7 @@
 const { spawn } = require('child_process');
 
 const cmds = [
-  'zip -r extension.zip src prism manifest.json'
+  'zip -r extension.zip src prism styles.css manifest.json'
 ]; 
 
 spawn(
