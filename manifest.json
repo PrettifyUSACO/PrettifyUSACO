@@ -1,14 +1,14 @@
 {
   "name": "Prettify USACO",
   "description": "Get prettier, more readable USACO Solutions!",
-  "version": "1.11",
+  "version": "1.12",
   "manifest_version": 2,
   "icons": {
     "128": "src/images/icon128.png"
   },
   "content_scripts": [
     {
-      "matches": ["http://usaco.org/*", "http://*.usaco.org/*"],
+      "matches": ["http://usaco.org/*", "http://*.usaco.org/*", "http://*.usaco.org/*"],
       "js": ["src/contentScript.js"]
     }
   ],
